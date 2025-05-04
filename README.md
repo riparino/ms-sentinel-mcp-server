@@ -69,7 +69,10 @@ After running the script, you can paste the configuration directly into your MCP
 
 ### 4. Use the MCP server
 
-After pasting the configuration into your MCP client, you can start using the MCP server.
+The MCP server will be ready for use after you've configured your MCP client config with the relevant workspace info. 
+
+Just remember that if you're using Azure CLI auth, you need to remove 
+`AZURE_CLIENT_ID` and `AZURE_CLIENT_SECRET` from your MCP client config.
 
 ---
 
