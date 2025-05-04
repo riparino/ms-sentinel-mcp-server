@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-server-sentinel"
-version = "0.1.0"
+version = "1.0.0"
 description = "Microsoft Sentinel MCP Server implementation"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 license = "MIT"
 authors = [
     {name = "Daniel Streefkerk", email = "email@example.com"}
@@ -16,7 +16,7 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Information Technology",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.10",
     "Topic :: Security",
 ]
 dependencies = [
@@ -58,8 +58,8 @@ download-kusto-dll = "download_dll:download_kusto_dll"
 _mcp_sentinel_post_install = "post_install:main"
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/mcp-server-sentinel"
-"Bug Tracker" = "https://github.com/yourusername/mcp-server-sentinel/issues"
+"Homepage" = "https://github.com/dstreefkerk/mcp-server-sentinel"
+"Bug Tracker" = "https://github.com/dstreefkerk/mcp-server-sentinel/issues"
 
 [tool.black]
 line-length = 88
