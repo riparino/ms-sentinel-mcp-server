@@ -1,0 +1,48 @@
+name: Repomix Summary Update
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'repository_context.md'
+  workflow_dispatch:
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Run repomix and prepend header
+        run: |
+          HEADER="<!--\nThis file contains a complete list of KQL queries from ${{ github.repositoryUrl }}.\nGenerated automatically using Repomix.\n-->\n\n"
+
+          npx repomix --compress --style markdown \
+            --no-file-summary \
+            --include "*.md,**/*.md" \
+            --output _repository_context.md
+
+          echo -e "$HEADER$(cat _repository_context.md)" > repository_context.md
+          rm _repository_context.md
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Repomix Action Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repository_context.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate+update repository_context.md via repomix"
+            git push
+          fi
