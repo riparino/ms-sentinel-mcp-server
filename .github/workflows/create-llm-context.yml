@@ -32,6 +32,7 @@ jobs:
           npx repomix --compress --style markdown \
             --no-file-summary \
             --include "*.md,**/*.md" \
+            --ignore "docs/architecture/**,docs/llm_instructions.md" \
             --output _llms.txt
 
           echo -e "$HEADER$(cat _llms.txt)" > llms.txt
