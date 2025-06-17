@@ -1,3 +1,5 @@
+[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/cd962876-444b-4626-b533-9d75e45053e0)
+
 # Microsoft Sentinel MCP Server
 
 A [Model Context Protocol][mcp] (MCP) server for Microsoft Sentinel. This server enables read-only access to a Microsoft Sentinel instance, including advanced querying, incident viewing, and resource exploration for Azure Sentinel environments. It provides a modular and extensible platform for observation-only security operations and analysis.
@@ -256,7 +258,3 @@ Logs are written to your temp directory as `sentinel_mcp_server.log`.
 This project is licensed under the [MIT License](LICENSE).
 
 [mcp]: https://modelcontextprotocol.io/
-
-## Badges and Verifications
-
-[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/cd962876-444b-4626-b533-9d75e45053e0)
