@@ -256,3 +256,7 @@ Logs are written to your temp directory as `sentinel_mcp_server.log`.
 This project is licensed under the [MIT License](LICENSE).
 
 [mcp]: https://modelcontextprotocol.io/
+
+## Badges and Verifications
+
+[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/cd962876-444b-4626-b533-9d75e45053e0)
